@@ -1,0 +1,23 @@
+spec: 1
+
+meta:
+  layout: layered-architecture
+  theme: corporate-blue
+  accent: blue
+  eyebrow: 技术架构 · 分层视图
+  title: 医保质控平台分层架构
+  subtitle: 自下而上：数据接入  →  质控引擎  →  业务应用  →  统一门户
+
+layers:
+  - { id: portal, label: 门户层, accent: violet, items: [医保工作台, 质控看板, 报表中心] }
+  - { id: app, label: 应用层, accent: blue, items: [病历质控, 规则中心, 目录管理] }
+  - { id: engine, label: 引擎层, accent: teal, items: [规则引擎, 知识库, 指标计算] }
+  - { id: data, label: 数据层, accent: slate, items: [HIS 接口库, 质控结果库, 目录库] }
+
+links:
+  - { from: data, to: engine, accent: slate }
+  - { from: engine, to: app, accent: slate }
+  - { from: app, to: portal, accent: slate }
+
+notes:
+  - text: 说明：层与层之间通过标准接口调用，上层不直接访问底层数据表。

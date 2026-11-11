@@ -1,0 +1,13 @@
+# 依赖：首次运行由 scripts/bootstrap.js 安装到技能目录
+node_modules/
+
+# 渲染产物与临时中间文件
+out/
+.*.art.png
+
+# 编辑器 / 系统
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.tmp

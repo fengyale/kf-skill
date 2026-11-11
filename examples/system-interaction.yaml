@@ -1,0 +1,33 @@
+spec: 1
+
+meta:
+  layout: system-interaction
+  theme: corporate-blue
+  accent: blue
+  eyebrow: 系统对接 · 数据流转
+  title: HIS 与医保质控系统双向对接闭环
+  subtitle: 医嘱、费用上行推送  ·  规则校验结果下行回传  ·  基层机构数据经 HIS 统一汇聚
+  autoNumberLinks: true
+  loopChip: 数据闭环
+
+nodes:
+  - { id: his, label: 新益华 HIS, desc: 业务数据源系统, shape: cloud, accent: blue }
+  - { id: qc, label: 医保质控系统, desc: 规则校验引擎, shape: cloud, accent: teal }
+
+links:
+  - { from: his, to: qc, label: 推送医嘱、费用, accent: blue }
+  - { from: qc, to: his, label: 回传规则校验结果（病历、诊断、目录…）, accent: teal }
+
+groups:
+  - id: clinics
+    mode: fanout
+    anchor: his
+    bidirectional: true
+    items: [卫生院 1, 卫生院 2, 卫生院 3, ……]
+
+constraints:
+  - { type: not_direct, between: [qc, clinics], reason: 所有数据均经 HIS 中转 }
+
+notes:
+  - text: 注：医保质控系统不与基层医疗机构直接交互，所有数据均经 HIS 中转。
+    align: right

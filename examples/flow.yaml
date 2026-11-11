@@ -1,0 +1,20 @@
+spec: 1
+
+meta:
+  layout: flow
+  theme: corporate-blue
+  accent: blue
+  eyebrow: 业务流程 · 质控闭环
+  title: 医保质控闭环处理流程
+  subtitle: 从医生开立医嘱到质控结果反馈，全流程可追溯
+  autoNumberSteps: true
+
+steps:
+  - { label: 医嘱开立, desc: 医生站录入 }
+  - { label: 费用上传, desc: HIS 实时接口 }
+  - { label: 规则校验, desc: 质控引擎 }
+  - { label: 结果回传, desc: 医生站提示 }
+  - { label: 申诉整改, desc: 病案室处理 }
+
+notes:
+  - text: 说明：规则校验为毫秒级同步调用，不阻塞医生开单。
