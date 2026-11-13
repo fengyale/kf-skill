@@ -1,0 +1,29 @@
+spec: 1
+
+meta:
+  layout: matrix
+  theme: corporate-blue
+  accent: blue
+  eyebrow: 能力规划 · 分阶段目标
+  title: 医保质控能力演进矩阵
+  subtitle: 按「数据接入 / 质控能力 / 分析决策」三个维度拆解现状与阶段目标
+
+matrix:
+  cols: [数据接入, 质控能力, 分析决策]
+  rows:
+    - { label: 现状, accent: slate }
+    - { label: 一期目标, accent: blue }
+    - { label: 二期目标, accent: teal }
+  cells:
+    - - { text: 手工导入 }
+      - { text: 事后抽查 }
+      - { text: 月度报表 }
+    - - { text: HIS 实时对接, accent: blue }
+      - { text: 全量规则校验, accent: blue }
+      - { text: 指标看板, accent: blue }
+    - - { text: 多院区数据汇聚, accent: teal }
+      - { text: 事前实时拦截, accent: teal }
+      - { text: 异常智能归因, accent: teal }
+
+notes:
+  - text: 说明：矩阵中的「目标」为阶段性描述，具体指标待与业务方确认。
