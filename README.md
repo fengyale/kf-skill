@@ -5,6 +5,7 @@
 | 技能 | 一句话 | 产出 | 文档 |
 | --- | --- | --- | --- |
 | [ppt-diagram-craft](ppt-diagram-craft/) | 把业务描述或手绘图转成风格统一的 16:9 配图 | SVG / PNG / PPTX | [README](ppt-diagram-craft/README.md) |
+| [agent-rules-refactor](agent-rules-refactor/) | 把重复臃肿的 Agent 规则文件收敛为「单一真源 + 按需触发」 | 重构后的规则体系 | [SKILL.md](agent-rules-refactor/SKILL.md) |
 
 ## 安装
 
