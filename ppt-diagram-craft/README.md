@@ -18,8 +18,8 @@
 ## 快速开始
 
 ```bash
-git clone https://github.com/fengyale/ppt-diagram-craft.git
-cd ppt-diagram-craft
+git clone https://github.com/fengyale/kf-skill.git
+cd kf-skill/ppt-diagram-craft
 node scripts/render.js examples/system-interaction.yaml --out out
 ```
 
@@ -35,7 +35,7 @@ meta:
 
 ## 作为技能使用
 
-把整个仓库放进 agent 的技能目录即可，`SKILL.md` 位于根目录。触发场景：要一张配图 / 示意图 / 架构图 / 流程图，或丢来一张手绘草图要复刻。字段与取值见 [SKILL.md](SKILL.md)、[spec-schema.md](references/spec-schema.md)、[design-tokens.md](references/design-tokens.md)。
+把本目录（`ppt-diagram-craft/`，不是整个仓库）放进 agent 的技能目录即可，`SKILL.md` 位于本目录根部。触发场景：要一张配图 / 示意图 / 架构图 / 流程图，或丢来一张手绘草图要复刻。字段与取值见 [SKILL.md](SKILL.md)、[spec-schema.md](references/spec-schema.md)、[design-tokens.md](references/design-tokens.md)。
 
 ## 硬约束
 

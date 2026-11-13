@@ -1,0 +1,16 @@
+# 技能自举安装的依赖
+node_modules/
+
+# 渲染产物与临时中间文件
+out/
+.*.art.png
+
+# 本地看图用的截图目录
+.screenshots/
+
+# 编辑器 / 系统
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.tmp
